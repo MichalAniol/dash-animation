@@ -1,0 +1,63 @@
+@font-face {
+    font-family: 'Rubik';
+    font-style: normal;
+    font-weight: 400;
+    src: url('font/Rubik-Regular.eot');
+    src: local('open sans extralight'), local('open-sans-extralight'), url('font/Rubik-Regular.eot?#iefix') format('embedded-opentype'), url('font/Rubik-Regular.woff2') format('woff2'), url('font/Rubik-Regular.woff') format('woff'), url('font/Rubik-Regular.ttf') format('truetype'), url('font/Rubik-Regular.svg#Barlow') format('svg');
+}
+
+:root {
+    --color_1: #006600;
+    --color_2: #001600;
+    --color_3: #000800;
+    --color_back: #000000;
+    --font: 'Rubik', sans-serif
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--color_back);
+    color: var(--color_1);
+    /* font-family: var(--font); */
+    font-size: 20px;
+    display: grid;
+    height: 100vh;
+}
+
+svg {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.name {
+    font-size: 3.17267656px;
+    line-height: 1.25;
+    font-family: var(--font);
+    text-align: center;
+    text-anchor: middle;
+    fill: #111111;
+    stroke: none;
+}
+
+@keyframes dash_name {
+    to {
+        stroke-dashoffset: -9;
+    }
+}
+
+.name {
+    stroke: magenta;
+    stroke-width: 0.2;
+    stroke-miterlimit: 4;
+    stroke-dasharray: .2, .4;
+    stroke-dashoffset: 0;
+    stroke-linecap: round;
+    paint-order: stroke fill;
+    animation: dash_name 15s linear infinite;
+}
+
+.name_path {
+    fill: none;
+    stroke: none;
+}

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html;  charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>dash animation</title>
+    <link rel='stylesheet' type='text/css' href='dash-animation.css'>
+</head>
+
+<body>
+    <svg viewBox="0 5 25 20">
+        <g id="name_7_3_0" class="name" transform="translate(9.3947,18.2586)" >
+            <defs>
+
+            </defs>
+            <path id="name_path" class="name_path" d="M -7,0 C 3.3517,8.2573 3.4234,-16.0205 12.7871,-8.0455">
+                <animate
+                    id="one"
+                    begin="0;one.end"
+                    dur="6s">
+                </animate>
+
+                <animate
+                    keySplines="0.5 0 0.5 1"
+                    calcMode="spline"
+                    begin="one.begin"
+                    xlink:href="#name_path"
+                    repeatCount="indefinite"
+                    attributeName="d"
+                    attributeType="XML"
+                    dur="3s"
+                    fill="freeze"
+                    from="M -7,0 C 3,8 3,-16 13,-8"
+                    to="M -8,-5 C 3,-24 3,16 16,-8">
+                </animate>
+
+                <animate
+                    keySplines="0.5 0 0.5 1"
+                    calcMode="spline"
+                    begin="one.begin+3s"
+                    xlink:href="#name_path"
+                    repeatCount="indefinite"
+                    attributeName="d"
+                    attributeType="XML"
+                    dur="3s"
+                    fill="freeze"
+                    to="M -7,0 C 3,8 3,-16 13,-8"
+                    from="M -8,-5 C 3,-24 3,16 16,-8">
+                </animate>
+            </path>
+            <text class="name" x="0" y="1">
+                <textPath href="#name_path" startOffset="50%">dash animation</textPath>
+            </text>
+        </g>
+
+
+    </svg>
+
+    <!-- <script src="index.js"></script> -->
+</body>
+
+</html>
